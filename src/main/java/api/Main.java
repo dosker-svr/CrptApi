@@ -1,6 +1,10 @@
 package api;
 
-import api.CrptApi.*;
+import api.enums.DocumentFormat;
+import api.enums.DocumentType;
+import api.pojo.Description;
+import api.pojo.DocumentProductIntroRF;
+import api.pojo.Product;
 
 import javax.naming.LimitExceededException;
 import java.io.IOException;
@@ -17,7 +21,7 @@ public class Main {
                 "String product_document",
                 null,
                 "@NonNull String signature",
-                CrptApi.DocumentType.AGGREGATION_DOCUMENT,
+                DocumentType.AGGREGATION_DOCUMENT,
                 new Description(UUID.randomUUID().toString()),
                 "@NonNull String doc_id",
                 "@NonNull String doc_status",
@@ -138,35 +142,5 @@ public class Main {
         System.out.println("RequestStartTime  =   " + CrptApi.getRequestStartTime());
         System.out.println("Token  =   " + CrptApi.getToken());
         System.out.println("LifetimeToken  =   " + CrptApi.getLifetimeToken());
-//        try {
-//            Thread newThread = new Thread(api::authorisation, "123");
-//        } catch (Exception ex) {
-//            System.out.println();
-//        }
-/*
-        TimeUnit time = TimeUnit.SECONDS;
-        long nanos = time.toNanos(1);
-        System.out.println("nanos on second = " + nanos);
-        LocalDateTime before = LocalDateTime.now();
-        LocalDateTime plusNanos = before.plusNanos(nanos);
-        System.out.println("before = " + before);
-        System.out.println("plusNanos = " + plusNanos);
-        Thread.sleep(1500);
-        System.out.println(plusNanos.isAfter(LocalDateTime.now()));
-*/
-        //System.out.println(localDateTime.minusNanos(LocalDateTime.now().to));
-        //System.out.println(time.name());
-//        ThreadGroup group = new ThreadGroup("группа A");
-//
-//        new ThreadAll(group, "Tок 1").start();
-//        new ThreadAll(group, "Тик 2").start();
-//        new ThreadAll(group, "Гор 3").start();
-//        new ThreadAll(group, "Мор 4").start();
-//        try {
-//            Thread.sleep(1000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//        group.interrupt();
     }
 }
