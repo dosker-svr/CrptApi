@@ -1,5 +1,4 @@
-package api;
-
+import api.CrptApi;
 import api.enums.DocumentFormat;
 import api.enums.DocumentType;
 import api.pojo.Description;
